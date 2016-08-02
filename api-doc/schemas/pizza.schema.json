@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "plate": {
+      "type": "object",
+      "properties": {
+        "food": {
+          "type": "string",
+          "default": "pizza"
+        }
+      },
+      "required": [
+        "food"
+      ]
+    },
+    "napkin": {
+      "type": "string",
+      "enum": [
+        "paper",
+        "cloth"
+      ]
+    }
+  },
+  "required": [
+    "plate",
+    "napkin"
+  ]
+}
