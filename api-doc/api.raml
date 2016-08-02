@@ -1,0 +1,75 @@
+#%RAML 1.0
+title: I want pizza
+description: |
+  Make a request, get a result. The result is pizza.
+version: 0.0.1
+/pizza:
+  get:
+    description: |
+      Get some pizza!
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "plate": {
+                  "food": "pizza"
+                  },
+                "napkin": "paper"
+              }
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "properties": {
+                  "plate": {
+                    "type": "object",
+                    "properties": {
+                      "food": {
+                        "type": "string",
+                        "default": "pizza"
+                      }
+                    },
+                    "required": [
+                      "food"
+                    ]
+                  },
+                  "napkin": {
+                    "type": "string",
+                    "enum": [
+                      "paper",
+                      "cloth"
+                    ]
+                  }
+                },
+                "required": [
+                  "plate",
+                  "napkin"
+                ]
+              }
+
+/trashcan:
+  post:
+    description: |
+      Put it in the can! (using xml for some reason)
+    body:
+      application/xml:
+        example: |
+          <napkin>pizza crust</napkin>
+        schema:
+          <?xml version="1.0" encoding="UTF-8"?>
+          <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:element name="napkin" type="xs:string"></xs:element>
+          </xs:schema>
+    responses:
+      202:
+        body:
+          application/xml:
+            example: |
+              <trashcan>pizza crust</trashcan>
+            schema: |
+              <?xml version="1.0" encoding="UTF-8"?>
+              <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+                <xs:element name="trashcan" type="xs:string"></xs:element>
+              </xs:schema>

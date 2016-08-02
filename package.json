@@ -1,0 +1,33 @@
+{
+  "name": "raml-dc-api",
+  "version": "0.0.1",
+  "description": "Demo project about RAML",
+  "repository": "https://github.com/naterkane/raml-dc-api-talk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "raml",
+    "node",
+    "express",
+    "javascript",
+    "testing",
+    "postman",
+    "dc web api",
+    "meetup",
+    "api",
+    "api-doc",
+    "api-spec"
+  ],
+  "author": "Nater Kane <nater@naterkane.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "raml2html": "github:naterkane/raml2html#raml1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "raml-mocker": "^0.2.5"
+  }
+}
