@@ -3,7 +3,10 @@
 var express = require('express');
 var app = express();
 
-app.get('/pizza', function (req, res) {
+
+app.use('/docs', express.static(__dirname + '/api-doc'));
+console.log(__dirname + '/api-doc')
+app.get('/api/pizza', function (req, res) {
   var response = {
     "plate": {
       "food": "pizza"
@@ -13,7 +16,6 @@ app.get('/pizza', function (req, res) {
 
   res.json(response);
 });
-
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });

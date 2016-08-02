@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node mocker",
-    "docs": "node node_modules/raml2html/bin/raml2html -i api-doc/api.raml -o api-doc/api-doc.html",
+    "docs": "node node_modules/raml2html/bin/raml2html -i api-doc/api.raml -o api-doc/index.html",
     "flatten": "node rparse.js"
   },
   "keywords": [
