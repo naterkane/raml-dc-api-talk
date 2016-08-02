@@ -1,0 +1,55 @@
+#%RAML 0.8
+title: I want pizza
+version: 0.0.1
+/pizza:
+  get:
+    description: |
+      Get some pizza!
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              {
+                "plate": {
+                  "food": "pizza"
+                  },
+                "napkin": "paper"
+              }
+
+            schema: |
+              {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "properties": {
+                  "plate": {
+                    "type": "object",
+                    "properties": {
+                      "food": {
+                        "type": "string",
+                        "default": "pizza",
+                        "enum": [
+                          "pizza",
+                          "fries",
+                          "veggie burgers",
+                          "processed cancer death feed"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "food"
+                    ]
+                  },
+                  "napkin": {
+                    "type": "string",
+                    "enum": [
+                      "paper",
+                      "cloth"
+                    ]
+                  }
+                },
+                "required": [
+                  "plate",
+                  "napkin"
+                ]
+              }
