@@ -5,6 +5,7 @@
   "repository": "https://github.com/naterkane/raml-dc-api-talk",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "node mocker",
     "docs": "node node_modules/raml2html/bin/raml2html -i api-doc/api.raml -o api-doc/api-doc.html",
     "flatten": "node rparse.js"
