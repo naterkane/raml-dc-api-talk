@@ -7,7 +7,13 @@
       "properties": {
         "food": {
           "type": "string",
-          "default": "pizza"
+          "default": "pizza",
+          "enum": [
+            "pizza",
+            "fries",
+            "veggie burgers",
+            "processed cancer death feed"
+          ]
         }
       },
       "required": [

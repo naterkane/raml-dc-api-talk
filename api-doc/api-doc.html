@@ -151,7 +151,13 @@
       "properties": {
         "food": {
           "type": "string",
-          "default": "pizza"
+          "default": "pizza",
+          "enum": [
+            "pizza",
+            "fries",
+            "veggie burgers",
+            "processed cancer death feed"
+          ]
         }
       },
       "required": [
@@ -171,16 +177,10 @@
     "napkin"
   ]
 }
-</code></pre><p><strong>Example</strong>:</p><pre><code>[object Object]</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="trashcan" class="panel-title">/trashcan</h3></div><div class="panel-body"><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_trashcan"><span class="parent"></span>/trashcan</a> <span class="methods"><a href="#trashcan_post"><span class="badge badge_post">post</span></a></span></h4></div><div id="panel_trashcan" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#trashcan_post'" class="list-group-item"><span class="badge badge_post">post</span><div class="method_description"><p>Put it in the can! (using xml for some reason)</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="trashcan_post"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_post">post</span> <span class="parent"></span>/trashcan</h4></div><div class="modal-body"><div class="alert alert-info"><p>Put it in the can! (using xml for some reason)</p></div><ul class="nav nav-tabs"><li class="active"><a href="#trashcan_post_request" data-toggle="tab">Request</a></li><li><a href="#trashcan_post_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="trashcan_post_request"><h3>Body</h3><p><strong>Media Type: application/xml</strong></p><p><strong>Schema</strong>:</p><pre><code><?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementformdefault="qualified" attributeformdefault="unqualified">
-  <xs:element name="napkin" type="xs:string"></xs:element>
-</xs:schema>
-</code></pre><p><strong>Example</strong>:</p><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;napkin&gt;pizza crust&lt;/napkin&gt;
-</code></pre></div><div class="tab-pane" id="trashcan_post_response"><h2>HTTP status code <a href="http://httpstatus.es/202" target="_blank">202</a></h2><h3>Body</h3><p><strong>Media Type: application/xml</strong></p><p><strong>Schema</strong>:</p><pre><code><?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementformdefault="qualified" attributeformdefault="unqualified">
-  <xs:element name="trashcan" type="xs:string"></xs:element>
-</xs:schema>
-</code></pre><p><strong>Example</strong>:</p><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;trashcan&gt;pizza crust&lt;/trashcan&gt;
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#pizza">/pizza</a></li><li><a href="#trashcan">/trashcan</a></li></ul></div></div></div></div></body></html>
+</code></pre><p><strong>Example</strong>:</p><pre><code>{
+  "plate": {
+    "food": "pizza"
+    },
+  "napkin": "paper"
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#pizza">/pizza</a></li></ul></div></div></div></div></body></html>

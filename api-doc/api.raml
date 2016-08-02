@@ -1,7 +1,5 @@
-#%RAML 1.0
+#%RAML 0.8
 title: I want pizza
-description: |
-  Make a request, get a result. The result is pizza.
 version: 0.0.1
 /pizza:
   get:
@@ -13,17 +11,3 @@ version: 0.0.1
           application/json:
             example: !include examples/pizza.json
             schema: !include schemas/pizza.schema.json
-/trashcan:
-  post:
-    description: |
-      Put it in the can! (using xml for some reason)
-    body:
-      application/xml:
-        example: !include examples/trashcan.request.xml
-        schema: !include schemas/trashcan.request.xsd
-    responses:
-      202:
-        body:
-          application/xml:
-            example: !include examples/trashcan.response.xml
-            schema: !include schemas/trashcan.response.xsd
