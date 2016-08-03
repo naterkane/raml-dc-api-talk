@@ -5,7 +5,6 @@ var app = express();
 
 
 app.use('/docs', express.static(__dirname + '/api-doc'));
-console.log(__dirname + '/api-doc')
 app.get('/api/pizza', function (req, res) {
   var response = {
     "plate": {
